@@ -22,5 +22,6 @@ Here is an example using
 
 ```
 java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask 
-"EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+"EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 3) 
+-s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 ```
