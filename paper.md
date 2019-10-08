@@ -1,5 +1,5 @@
 ---
-title: 'OFSER: Online Feature Selection with Evolving Regularization for Massive Online Analysis'
+title: 'MOAFS: A Massive Online Analysis library for feature selection in data streams'
 tags:
   - Java
   - feature selection
@@ -16,48 +16,15 @@ authors:
 affiliations:
  - name: Faculty of Technology, University of Campinas
    index: 1
-date: 12 August 2019
+date: 08 October 2019
 bibliography: paper.bib
 ---
 
 # Summary
 
-Online Feature Selection with Evolving Regularization (OFSER) is a proposed feature selection
-algorithm for dimensionality reduction on data streams. It is a modified version of
-the Online Feature Selection (OFS) method. The OFSER calculates a new regularization
-value for each new instance instead of a fixed, user-input definition used by OFS. With this approach,
-it increases or decreases regularization on demand, setting weights
-for each attribute in an evoluationary way. This process improves the selection of new relevant features
-even in the presence of the Concept Drift phenomenon, the change on data's probabilistic distribution 
-over time.
+Data streams are continuous, potentially unbounded and high-dimensional data, transmitted at high-volume and high-velocity, which turns impracticable its storage in traditional database mechanisms [@Ramirez-Gallego:2017]. In such cases, data streams have to be processed and analyzed online. However, as it is potentially unbounded, it is expected a change in data probabilistic distribution over time, the Concept Drift phenomenon. This phenomenon turns the online data process and analysis completely dynamic. Using classification algorithms is one approach to learn from data streams, as it will categorize the data into different classes for future decisions. However, data streams high dimensionality imposes a challenge on the classification process, since it increases both computational cost and time, as well as aggravate the concept drift impacts. To solve this problem, online feature selection algorithms have been proposed to reduce data dimensionality by removing irrelevant and redundant attributes from the data streams. 
 
-The OFSER-lib is a library for the Massive Online Analysis (MOA) framework. It contains the implementation of OFSER and
-a collection of seven other feature selection algorithms for performance comparisons, including incremental versions of Information Gain, Symmetrical Uncertainty, Chi-squared and Cramers V-Test, as well as OFS and Extremal Feature Selection (EFS) algorithms.
-
-
-
-# Mathematics
-
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
-
-Double dollars make self-standing equations:
-
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
-
-
-# Citations
-
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
+`MOAFS` is a library for the Massive Online Analysis (MOA) [@Bifet:2010] framework. It is based on the MOAReduction [@Ramirez-Gallego:2017] extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field. `MOAFS` includes incremental versions of information-based filter algorithms such as Information Gain [@Quinlan:1986], Symmetrical Uncertainty used by the Fast Correlation-Based Filter [@Yu:2003], Chi-squared [@Pearson:1990], Cramers V-Test [@Cramer:1946], as well as wrapper algorithms such as Online Feature Selection [@Wang:2014] and Extremal Feature Selection [@Carvalho:2006]. `MOAFS` can be used as extension for MOA to perform different performance evaluations, including experiments considering different reduction rates and processing windows.
 
 
 # Acknowledgements

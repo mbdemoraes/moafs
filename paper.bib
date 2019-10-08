@@ -1,89 +1,105 @@
----
-title: 'Gala: A Python package for galactic dynamics'
-tags:
-  - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
-authors:
-  - name: Adrian M. Price-Whelan
-    orcid: 0000-0003-0872-7098
-    affiliation: "1, 2" # (Multiple affiliations must be quoted)
-  - name: Author 2
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-affiliations:
- - name: Lyman Spitzer, Jr. Fellow, Princeton University
-   index: 1
- - name: Institution 2
-   index: 2
-date: 13 August 2017
-bibliography: paper.bib
----
+@article{Ramirez-Gallego:2017,
+author = {Ram{\'{i}}rez-Gallego, Sergio and Krawczyk, Bartosz and Garc{\'{i}}a, Salvador and Wo{\'{z}}niak, Micha{\l} and Herrera, Francisco},
+doi = {10.1016/j.neucom.2017.01.078},
+issn = {0925-2312},
+journal = {Neurocomputing},
+pages = {39--57},
+title = {{A survey on data preprocessing for data stream mining: Current status and future directions}},
+volume = {239},
+year = 2017
+}
 
-# Summary
+@Inbook{Pearson:1990,
+author="Pearson, Karl",
+editor="Kotz, Samuel
+and Johnson, Norman L.",
+title="On the Criterion that a Given System of Deviations from the Probable in the Case of a Correlated System of Variables is Such that it Can be Reasonably Supposed to have Arisen from Random Sampling",
+bookTitle="Breakthroughs in Statistics: Methodology and Distribution",
+year="1992",
+publisher="Springer New York",
+address="New York, NY",
+pages="11--28",
+isbn="978-1-4612-4380-9",
+doi="10.1007/978-1-4612-4380-9_2"
+}
 
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
+@Inbook{Cramer:1946,
+author="Cramer, Harald",
+bookTitle="Mathematical Methods of Statistics",
+publisher="Princeton University Press",
+address="Princeton, NJ",
+year=1946
+}
 
-``Gala`` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for ``Gala`` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. ``Gala`` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the ``Astropy`` package [@astropy] (``astropy.units`` and
-``astropy.coordinates``).
+@inproceedings{Carvalho2006,
+ author = {Carvalho, Vitor R. and Cohen, William W.},
+ title = {Single-pass Online Learning: Performance, Voting Schemes and Online Feature Selection},
+ booktitle = {Anais do 12 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+ series = {KDD '06},
+ year = {2006},
+ isbn = {1-59593-339-5},
+ location = {Philadelphia, PA, USA},
+ pages = {548--553},
+ numpages = {6},
+ doi = {10.1145/1150402.1150466},
+ acmid = {1150466},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {averaging, online learning, voting, winnow},
+} 
 
-``Gala`` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in ``Gala`` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
+@article{Wang:2014,
+annote = {Online Feature Selection (OFS)},
+author = {Wang, Jialei and Zhao, Peilin and Hoi, Steven C.H. and Jin, Rong},
+doi = {10.1109/TKDE.2013.32},
+issn = {1041--4347},
+journal = {IEEE Transactions on Knowledge and Data Engineering},
+number = {3},
+pages = {698--710},
+title = {{Online feature selection and its applications}},
+volume = {26},
+year = 2014
+}
 
-# Mathematics
+@article{Quinlan:1986,
+author = {Quinlan, J. R.},
+doi = {10.1023/A:1022643204877},
+issn = {1573-0565},
+journal = {Machine Learning},
+number = {1},
+pages = {81--106},
+pmid = {17050186},
+title = {{Induction of Decision Trees}},
+volume = {1},
+year = 1986
+}
 
-Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
+@inproceedings{Yu:2003,
+  title = {Feature Selection for High-Dimensional Data},
+  subtitle = {A Fast Correlation-Based Filter Solution},
+author = {Lei Yu and Huan Liu},
+eventtitle = {{Twentieth International Conference on Machine Learning}},
+isbn = {1577351894},
+volume = {2},
+pages = {856--863},
+editor = {T. Fawcett and N. Mishra},
+address = {Washington},
+publisher = {Scopus}, 
+year = {2003},
+eventdate={2003}
+}
 
-Double dollars make self-standing equations:
-
-$$\Theta(x) = \left\{\begin{array}{l}
-0\textrm{ if } x < 0\cr
-1\textrm{ else}
-\end{array}\right.$$
-
-
-# Citations
-
-Citations to entries in paper.bib should be in
-[rMarkdown](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
-format.
-
-For a quick reference, the following citation commands can be used:
-- `@author:2001`  ->  "Author et al. (2001)"
-- `[@author:2001]` -> "(Author et al., 2001)"
-- `[@author1:2001; @author2:2001]` -> "(Author1 et al., 2001; Author2 et al., 2002)"
-
-# Figures
-
-Figures can be included like this: ![Example figure.](figure.png)
-
-# Acknowledgements
-
-We acknowledge contributions from Brigitta Sipocz, Syrtis Major, and Semyeong
-Oh, and support from Kathryn Johnston during the genesis of this project.
-
-# References
+@article{Bifet:2010,
+  author    = {Albert Bifet and
+               Geoff Holmes and
+               Richard Kirkby and
+               Bernhard Pfahringer},
+  title     = {{MOA:} Massive Online Analysis},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {11},
+  pages     = {1601--1604},
+  year      = 2010,
+  timestamp = {Fri, 01 Apr 2011 14:32:52 +0200},
+  biburl    = {https://dblp.org/rec/bib/journals/jmlr/BifetHKP10},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
