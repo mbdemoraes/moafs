@@ -1,12 +1,10 @@
 # Abstract
 
-`MOAFS` is a library for the [Massive Online Analysis](https://moa.cms.waikato.ac.nz/) framework. It is based on the [MOAReduction](https://linkinghub.elsevier.com/retrieve/pii/S0925231217302631) extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field.
-
+`MOAFS` is a library for the [Massive Online Analysis](https://moa.cms.waikato.ac.nz/) framework. It is based on the [MOAReduction](https://linkinghub.elsevier.com/retrieve/pii/S0925231217302631) extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field. `MOAFS` uses an incremental version of Naïve Bayes as the base classifier.
 
 # Documentation
 
 For futher documentation, please refer to the [Docs]().
-
 
 # Installation and requirements
 
@@ -50,3 +48,8 @@ java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "Ev
 # License
 
 Distributed under the GNU General Public License v3.0 License. See `LICENSE` for more information.
+
+# Contact
+
+If you wish to contribute to the software, report issues or problems or seek suport, feel free to contact me.
+Matheus Bernardelli de Moraes - matheuzmoraes@gmail.com
