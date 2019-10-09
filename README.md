@@ -21,19 +21,19 @@ Requirements: Java 8 and [MOA v2018.06](https://moa.cms.waikato.ac.nz/downloads/
 `MOAFS` uses a set of different parameters:
 
 * -f: Reduction rate - The number of features to select (default = 10)
-* -w: Processing window -  The number of instances to be processed using the specified reduction rate
-* -m: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. EFS 7. OFS
+* -w: Processing window -  The number of instances to be processed using the specified reduction rate (default = 1)
+* -m: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection
 
-# Example from the command line
+# Examples from the command line
 
-Here is an example using the Interleaved-Test-Then-Train approach with the Online Feature Selection algorithm on the [Usenet1]() data set:
+Here is an example using the Interleaved-Test-Then-Train approach with the Online Feature Selection algorithm on the [Usenet1]() data set, selecting 20 features:
 
 ```
 java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 ```
 
-Another example on the same data set using Information Gain:
+Another example on the same data set using Information Gain, selecting 40 features:
 
 ```
-java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 ```
