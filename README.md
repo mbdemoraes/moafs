@@ -4,7 +4,7 @@
 
 # Installation and requirements
 
-Simply download the `moafs.jar` from the lib directory in this repository and add the file to the "lib" folder in the directory where MOA is installed. Then add `moafs.jar` to the classpath when launching MOA:
+Simply download the [moafs.jar](https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar) from the lib directory in this repository and add the file to the "lib" folder in the directory where MOA is installed. Then add `moafs.jar` to the classpath when launching MOA:
 
 Example (Windows):
 
