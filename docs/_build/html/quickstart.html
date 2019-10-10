@@ -102,8 +102,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#gain-ratio">Gain Ratio</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#extremal-feature-selection">Extremal Feature Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#online-feature-selection">Online Feature Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reduction-rate">Reduction rate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#processing-window">Processing window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-reduction-rate">Changes in Reduction rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-processing-window">Changes in Processing window</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examplesGUI.html">Examples (GUI)</a></li>
@@ -231,8 +231,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="reduction-rate">
-<h2>Reduction rate<a class="headerlink" href="#reduction-rate" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="changes-in-reduction-rate">
+<h2>Changes in Reduction rate<a class="headerlink" href="#changes-in-reduction-rate" title="Permalink to this headline">¶</a></h2>
 <p>Simply change the value for the <cite>-f</cite> parameter in your command line. If you do not want to perform any reduction, just omit it. For instance:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
@@ -242,8 +242,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="processing-window">
-<h2>Processing window<a class="headerlink" href="#processing-window" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="changes-in-processing-window">
+<h2>Changes in Processing window<a class="headerlink" href="#changes-in-processing-window" title="Permalink to this headline">¶</a></h2>
 <p>Simply change the value for the <cite>-w</cite> parameter in your command line. If you do not want to specify a processing window, just omit it and the default (1) will be used. For instance:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
@@ -252,6 +252,7 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6 -w 1000) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
 </div>
+<p>For further documentation on MOA, please refer to <a class="reference external" href="https://moa.cms.waikato.ac.nz/documentation/">https://moa.cms.waikato.ac.nz/documentation/</a>.</p>
 </div>
 </div>
 
