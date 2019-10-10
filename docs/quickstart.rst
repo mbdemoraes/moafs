@@ -99,7 +99,7 @@ Simply change the value for the `-w` parameter in your command line. If you do n
 
   java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 
-If you want a particular number, e.g. 1000 instancess, add it after the `-w` parameter:  
+If you want a particular number, e.g. 1000 instances, add it after the `-w` parameter:  
 
 .. code-block:: bash
 
