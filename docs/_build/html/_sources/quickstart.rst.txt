@@ -1,4 +1,4 @@
-Installation
+Quick Start
 =============
 In order to get started with MOAFS, you need to download it on your computer. 
 There are two main ways to to this:
