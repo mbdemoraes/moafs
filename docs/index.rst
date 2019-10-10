@@ -12,3 +12,4 @@ Welcome to Moafs's documentation!
 
    install
    quickstart
+   examplesGUI

@@ -1,4 +1,4 @@
-Examples
+Examples (command line)
 ============
 
 No method
