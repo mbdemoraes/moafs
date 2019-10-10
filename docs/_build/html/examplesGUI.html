@@ -92,17 +92,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Examples (command line)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples (GUI)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#no-method">No method</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#information-gain">Information Gain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#symmetrical-uncertainty">Symmetrical Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#chi-squared">Chi-Squared</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#cramers-v-test">Cramers V-Test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#gain-ratio">Gain Ratio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extremal-feature-selection">Extremal Feature Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#online-feature-selection">Online Feature Selection</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples (GUI)</a></li>
 </ul>
 
             
@@ -169,54 +159,6 @@
             
   <div class="section" id="examples-gui">
 <h1>Examples (GUI)<a class="headerlink" href="#examples-gui" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="no-method">
-<h2>No method<a class="headerlink" href="#no-method" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="information-gain">
-<h2>Information Gain<a class="headerlink" href="#information-gain" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="symmetrical-uncertainty">
-<h2>Symmetrical Uncertainty<a class="headerlink" href="#symmetrical-uncertainty" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 2) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="chi-squared">
-<h2>Chi-Squared<a class="headerlink" href="#chi-squared" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="cramers-v-test">
-<h2>Cramers V-Test<a class="headerlink" href="#cramers-v-test" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 4) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="gain-ratio">
-<h2>Gain Ratio<a class="headerlink" href="#gain-ratio" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 5) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="extremal-feature-selection">
-<h2>Extremal Feature Selection<a class="headerlink" href="#extremal-feature-selection" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="online-feature-selection">
-<h2>Online Feature Selection<a class="headerlink" href="#online-feature-selection" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
-</pre></div>
-</div>
-</div>
 </div>
 
 
