@@ -68,7 +68,10 @@ java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "Ev
 
 This should generate a similar results screen:
 
-<img src="/docs/_static/telaMOAFS.jpg" alt="MOAFSscreen">
+
+<p align="left">
+<img src="./docs/_static/telaMOAFS.jpg" alt="MOAFSscreen" width="500" height="500">
+</p>
 
 Another example on the same data set using Information Gain, selecting 40 features:
 
