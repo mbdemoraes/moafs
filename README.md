@@ -35,15 +35,23 @@ For futher documentation, please refer to the <a href="https://moafs.readthedocs
 
 # Installation and requirements
 
-Simply download the [moafs.jar](https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar) from the lib directory in this repository and add the file to the "lib" folder in the directory where MOA is installed. Then add `moafs.jar` to the classpath when launching MOA:
+Simply download the [moafs.jar](https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar) from the lib directory in this repository and add the file to the "lib" folder in the directory where MOA is installed. Then, from the same folder, use the follow command:
 
-Example (Windows):
+Example on Windows (from the lib folder where your MOA is installed):
 
 > java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
-Example (Linux/mac):
+You can also use the jar's full location:
+
+> java -cp .;moa-release-2018.6.0/lib/moafs.jar;moa-release-2018.6.0/lib/moa.jar -javaagent:moa-release-2018.6.0/lib/sizeofag-1.0.4.jar moa.gui.GUI
+
+Example on Linux/MAC (from the lib folder where your MOA is installed):
 
 > java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+
+Using full location:
+
+> java -cp moa-release-2018.6.0/lib/moa.jar:./moa.jar-javaagent:moa-release-2018.6.0/lib/sizeofag-1.0.4.jar moa.gui.GUI
 
 ### Requirements
 
