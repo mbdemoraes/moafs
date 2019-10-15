@@ -129,6 +129,10 @@ AttributeEvaluator, MOAAttributeEvaluator{
 	    return text.toString();
 	  }
 
+	/**
+	 * Get both maximum and minimum values of a given instance
+	 * @param numbers Instance values
+	 */
 	public static void getMaxMinValue(double[] numbers){
 		maxValue = numbers[0];
 		minValue = numbers[0];
@@ -143,6 +147,12 @@ AttributeEvaluator, MOAAttributeEvaluator{
 
 	}
 	
+	/**
+	 * Sorts instance's attribute values from best to worst
+	 * @param m_attributeList 
+	 * @param m_attributeMerit
+	 * @return
+	 */
 	public double[][] rankedAttributes(int[] m_attributeList, double[] m_attributeMerit){
 	    int i, j;
 
@@ -165,6 +175,10 @@ AttributeEvaluator, MOAAttributeEvaluator{
 	    return bestToWorst;
 	    
 	}
+	
+	/**
+	 * Find the lowest scores to include in the selected features according to authors criteria
+	 */
 	
 	public void findLowestScore(){
 		
@@ -219,7 +233,7 @@ AttributeEvaluator, MOAAttributeEvaluator{
 	}
 
 	/**
-	 * 
+	 * Necessary method from the MOAAttributeEvalutor interface. Updates the evaluator with the new information.
 	 */
 
 	public void updateEvaluator(Instance inst) throws Exception {
@@ -280,14 +294,24 @@ AttributeEvaluator, MOAAttributeEvaluator{
 
 	}
 
+	/**
+	 * Used to verify if a selection is needed.
+	 */
 	public void applySelection() {
 		updated = false;
 
 	}
 
+	/**
+	 * Returns if the evaluator is updated.
+	 */
 	public boolean isUpdated() {
 		return updated;
 	}
+	
+	/**
+	 * Evaluate attribute relevance.
+	 */
 
 	public double evaluateAttribute(int attribute) throws Exception {
 		

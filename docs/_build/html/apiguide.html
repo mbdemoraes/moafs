@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Documentation &mdash; Moafs  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Examples (GUI)" href="examplesGUI.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Moafs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="install.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Examples (command line)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examplesGUI.html">Examples (GUI)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#naive-bayes">Naïve Bayes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#information-based-algorithms">Information-based algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attribute-evaluator">Attribute Evaluator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extremal-feature-selection">Extremal Feature Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#online-feature-selection">Online Feature Selection</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Moafs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/apiguide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This section contains the documentation of all classes and functions of <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code>.</p>
+<div class="section" id="naive-bayes">
+<h2>Naïve Bayes<a class="headerlink" href="#naive-bayes" title="Permalink to this headline">¶</a></h2>
+<p>class moa.featureselection.classifiers.NaiveBayes()</p>
+<p>This is an incremental version of the Naïve Bayes classifier. This is the main class of the <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code> library. It receives the requests from MOA and performs
+prediction using (or not) the feature selection methods available at <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code>. Since it is using the Interleaved-Test-Then-Train approach, each instance is used
+to test the model before it is used for training.</p>
+<div class="admonition-public-string-getpurposestring admonition">
+<p class="first admonition-title">public String getPurposeString()</p>
+<p>Method used by MOA to display the class purpose at the GUI.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>A string explaining the class purpose.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-boolean-israndomizable admonition">
+<p class="first admonition-title">public boolean isRandomizable()</p>
+<p>Necessary method from the AbstractClassifier class. It Gets whether this learner needs a random seed. Examples of methods that needs a random seed are bagging and boosting.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>False</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-getmodeldescription-stringbuilder-out-int-indent admonition">
+<p class="first admonition-title">public void getModelDescription(StringBuilder out, int indent)</p>
+<p>Necessary method from the AbstractClassifier class. Returns a string representation of the model.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>StringBuilder <cite>out</cite>:  A mutable sequence of characters. This class provides an API compatible with StringBuffer, but with no guarantee of synchronization.</li>
+<li>int <cite>indent</cite>: The number of characters to indent.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-protected-measurement-getmodelmeasurementsimpl admonition">
+<p class="first admonition-title">protected Measurement[] getModelMeasurementsImpl()</p>
+<p>Necessary method from the AbstractClassifier class. Class for storing an evaluation measurement.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>Null</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-double-getvotesforinstance-com-yahoo-labs-samoa-instances-instance-inst admonition">
+<p class="first admonition-title">public double[] getVotesForInstance(com.yahoo.labs.samoa.instances.Instance inst)</p>
+<p>Necessary method from the AbstractClassifier class. Predicts the class memberships for a given instance. If an instance is unclassified, the returned array elements must be all zero.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>inst : The instance to be classified.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>The prediction of the instance class using doNaiveBayesPrediction() method.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-resetlearningimpl admonition">
+<p class="first admonition-title">public void resetLearningImpl()</p>
+<p>Necessary method from the AbstractClassifier class. Resets this classifier. It must be similar to starting a new classifier from scratch.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-trainoninstanceimpl-com-yahoo-labs-samoa-instances-instance-inst admonition">
+<p class="first admonition-title">public void trainOnInstanceImpl(com.yahoo.labs.samoa.instances.Instance inst)</p>
+<blockquote>
+<div>Necessary method from the AbstractClassifier class. Trains this classifier incrementally using the given instance.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>inst : The instance to be classified.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-protected-attributeclassobserver-newnominalclassobserver admonition">
+<p class="first admonition-title">protected AttributeClassObserver newNominalClassObserver()</p>
+<blockquote>
+<div>Interface for observing the class data distribution for an attribute. This observer monitors the class distribution of a given attribute. Used in naive Bayes and decision trees to monitor data statistics on leaves.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>NominalAttributeClassObserver(): Class distribution of a given nominal attribute.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-protected-attributeclassobserver-newnumericclassobserver admonition">
+<p class="first admonition-title">protected AttributeClassObserver newNumericClassObserver()</p>
+<blockquote>
+<div>Interface for observing the class data distribution for an attribute. This observer monitors the class distribution of a given attribute. Used in naive Bayes and decision trees to monitor data statistics on leaves.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>new GaussianNumericAttributeClassObserver(): Class distribution of a given numeric attribute.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-private-void-performfeatureselection-com-yahoo-labs-samoa-instances-instance-rinst admonition">
+<p class="first admonition-title">private void performFeatureSelection(com.yahoo.labs.samoa.instances.Instance rinst)</p>
+<blockquote>
+<div>Performs Feature Selection using the selected methods.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>rinst : The instance to be reduced.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-double-donaivebayesprediction-com-yahoo-labs-samoa-instances-instance-inst-doublevector-observedclassdistribution-autoexpandvector-attributeclassobserver-attributeobservers admonition">
+<p class="first admonition-title">public double[] doNaiveBayesPrediction(com.yahoo.labs.samoa.instances.Instance inst,
+            DoubleVector observedClassDistribution, AutoExpandVector&lt;AttributeClassObserver&gt; attributeObservers)</p>
+<blockquote>
+<div>Performs classification using Naive Bayes using the selected features.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>inst : The instance to be reduced.</li>
+<li>observedClassDistribution : The observed class distribution.</li>
+<li>attributeObservers: Attribute class distribution.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>votes: The predicted class of a given instance.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="information-based-algorithms">
+<h2>Information-based algorithms<a class="headerlink" href="#information-based-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>class moa.featureselection.algorithms.IncrInfoThAttributeEval()</p>
+<p>Evaluates the worth of an attribute by measuring the information gain, chi-squared, symmetrical uncertainty, crammer’s v-test or gain ratio with respect to the class.</p>
+<div class="admonition-public-string-globalinfo admonition">
+<p class="first admonition-title">public String globalInfo()</p>
+<p>Returns a string describing this attribute evaluator.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numFeatures: Number of features to select.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>A description of the evaluator suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-binarizenumericattributestiptext admonition">
+<p class="first admonition-title">public String binarizeNumericAttributesTipText()</p>
+<p>Returns the tip text for this property</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numFeatures: Number of features to select.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>A tip text for this property suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-setbinarizenumericattributes-boolean-b admonition">
+<p class="first admonition-title">public void setBinarizeNumericAttributes(boolean b)</p>
+<p>Binarize numeric attributes.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>b: if true, binarize numeric attributes</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-boolean-getbinarizenumericattributes admonition">
+<p class="first admonition-title">public boolean getBinarizeNumericAttributes()</p>
+<p>Get whether numeric attributes are just being binarized.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>True if missing values are being distributed.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-missingmergetiptext admonition">
+<p class="first admonition-title">public String missingMergeTipText()</p>
+<p>Returns the tip text for this property.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>Tip text for this property suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-setmissingmerge-boolean-b admonition">
+<p class="first admonition-title">public void setMissingMerge(boolean b)</p>
+<p>Distribute the counts for missing values across observed values</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>b: if true, distribute missing values.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-boolean-getmissingmerge admonition">
+<p class="first admonition-title">public boolean getMissingMerge()</p>
+<p>Get whether missing values are being distributed or not</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>True if missing values are being distributed.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-capabilities-getcapabilities admonition">
+<p class="first admonition-title">public Capabilities getCapabilities()</p>
+<p>Returns the capabilities of this evaluator.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>The capabilities of this evaluator</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-buildevaluator-weka-core-instances-data admonition">
+<p class="first admonition-title">public void buildEvaluator(weka.core.Instances data)</p>
+<p>Initializes an information gain attribute evaluator. Discretizes all attributes that are numeric.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>data: data set of instances serving as training data</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-updateevaluator-instance-inst admonition">
+<p class="first admonition-title">public void updateEvaluator(Instance inst)</p>
+<p>Updates an information gain attribute evaluator. Discretizes all attributes that are numeric.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>dnst: data set of instances serving as training data</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-applyselection admonition">
+<p class="first admonition-title">public void applySelection()</p>
+<p>Update the contingency tables and the rankings for each features using the counters. Counters are updated in each iteration.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-protected-void-resetoptions admonition">
+<p class="first admonition-title">protected void resetOptions()</p>
+<p>Reset options to their default values</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-protected-void-resetoptions admonition">
+<p class="first admonition-title">protected void resetOptions()</p>
+<p>Evaluates an individual attribute by measuring the amount of information gained about the class given the attribute.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>attribute: The index of the attribute to be evaluated</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>The info gain, chi-squared, symmetrical uncertainty, crammers or gain ratio</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-tostring admonition">
+<p class="first admonition-title">public String toString()</p>
+<p>Describe the attribute evaluator</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>A description of the attribute evaluator as a string</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-getrevision admonition">
+<p class="first admonition-title">public String getRevision()</p>
+<p>Returns the revision string.</p>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>The revision</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="attribute-evaluator">
+<h2>Attribute Evaluator<a class="headerlink" href="#attribute-evaluator" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-class-moa-featureselection-common-moaattributeevaluator admonition">
+<p class="first admonition-title">class moa.featureselection.common.MOAAttributeEvaluator()</p>
+<p class="last">Teste</p>
+</div>
+</div>
+<div class="section" id="extremal-feature-selection">
+<h2>Extremal Feature Selection<a class="headerlink" href="#extremal-feature-selection" title="Permalink to this headline">¶</a></h2>
+<p>class moa.featureselection.algorithms.ExtremalFeatureSelection()</p>
+<p>Evaluates the worth of an attribute through the computation of weights based on the Modified Balanced Winnow. Original paper on <a class="reference external" href="https://dl.acm.org/citation.cfm?doid=1150402.1150466">https://dl.acm.org/citation.cfm?doid=1150402.1150466</a>.</p>
+<div class="admonition-public-extremalfeatureselection-int-numfeatures admonition">
+<p class="first admonition-title">public ExtremalFeatureSelection(int numFeatures)</p>
+<blockquote>
+<div>Constructor.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numFeatures: Number of features to select.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-string-globalinfo admonition">
+<p class="first admonition-title">public String globalInfo()</p>
+<blockquote>
+<div>Returns a string describing this attribute evaluator</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>A description of the evaluator suitable for displaying in the explorer/experimenter gui</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-public-string-tostring admonition">
+<p class="first admonition-title">public String toString()</p>
+<blockquote>
+<div>Describe the attribute evaluator</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>A description of the attribute evaluator as a string</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-public-string-tostring admonition">
+<p class="first admonition-title">public String toString()</p>
+<blockquote>
+<div>Describe the attribute evaluator</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd><ul class="first last simple">
+<li>A description of the attribute evaluator as a string</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="admonition-public-static-void-getmaxminvalue-double-numbers admonition">
+<p class="first admonition-title">public static void getMaxMinValue(double[] numbers)</p>
+<blockquote>
+<div>Get both maximum and minimum values of a given instance</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numbers: Instance values</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-double-rankedattributes-int-m-attributelist-double-m-attributemerit admonition">
+<p class="first admonition-title">public double[][] rankedAttributes(int[] m_attributeList, double[] m_attributeMerit)</p>
+<blockquote>
+<div>Sorts instance’s attribute values from best to worst</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>m_attributeList: Index of every attribute value</li>
+<li>m_attributeMerit: Attribute values</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-findlowestscore admonition">
+<p class="first admonition-title">findLowestScore()</p>
+<blockquote>
+<div>Find the lowest scores to include in the selected features according to authors criteria</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-void-updatemodels-double-normalizeddata-double-trueclass admonition">
+<p class="first admonition-title">public void updateModels(double[] normalizedData, double trueClass)</p>
+<blockquote>
+<div>Necessary method from the ASEvalution class. Updates the positive and negative models.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>normalizedData:  Instance normalized data</li>
+<li>trueClass: Instance true class</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-void-updateevaluator-instance-inst admonition">
+<p class="first admonition-title">public void updateEvaluator(Instance inst)</p>
+<blockquote>
+<div>Necessary method from the MOAAttributeEvalutor interface. Updates the evaluator with the new information.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>inst:  The instance to be classified.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-void-applyselection admonition">
+<p class="first admonition-title">public void applySelection()</p>
+<blockquote>
+<div>Used to verify if a selection is needed.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+<div class="admonition-public-double-evaluateattribute-int-attribute admonition">
+<p class="first admonition-title">public double evaluateAttribute(int attribute)</p>
+<blockquote>
+<div>Evaluate attribute relevance.</div></blockquote>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>attribute: The index of the attribute to be evaluated.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="online-feature-selection">
+<h2>Online Feature Selection<a class="headerlink" href="#online-feature-selection" title="Permalink to this headline">¶</a></h2>
+<p>class moa.featureselection.algorithms.OFS()</p>
+<p>Evaluates the worth of an attribute through the computation of weights using a linear classifier with sparse projection. Original paper on <a class="reference external" href="https://doi.ieeecomputersociety.org/10.1109/TKDE.2013.32">https://doi.ieeecomputersociety.org/10.1109/TKDE.2013.32</a>.</p>
+<div class="admonition-public-string-globalinfo admonition">
+<p class="first admonition-title">public String globalInfo()</p>
+<p>Returns a string describing this attribute evaluator.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numFeatures: Number of features to select.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>A description of the evaluator suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-binarizenumericattributestiptext admonition">
+<p class="first admonition-title">public String binarizeNumericAttributesTipText()</p>
+<p>Returns the tip text for this property</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>numFeatures: Number of features to select.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>A tip text for this property suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-setbinarizenumericattributes-boolean-b admonition">
+<p class="first admonition-title">public void setBinarizeNumericAttributes(boolean b)</p>
+<p>Binarize numeric attributes.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>b: if true, binarize numeric attributes</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-boolean-getbinarizenumericattributes admonition">
+<p class="first admonition-title">public boolean getBinarizeNumericAttributes()</p>
+<p>Get whether numeric attributes are just being binarized.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>True if missing values are being distributed.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-missingmergetiptext admonition">
+<p class="first admonition-title">public String missingMergeTipText()</p>
+<p>Returns the tip text for this property.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>Tip text for this property suitable for displaying in the explorer/experimenter gui</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-setmissingmerge-boolean-b admonition">
+<p class="first admonition-title">public void setMissingMerge(boolean b)</p>
+<p>Distribute the counts for missing values across observed values</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>b: if true, distribute missing values.</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-boolean-getmissingmerge admonition">
+<p class="first admonition-title">public boolean getMissingMerge()</p>
+<p>Get whether missing values are being distributed or not</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>True if missing values are being distributed.</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-capabilities-getcapabilities admonition">
+<p class="first admonition-title">public Capabilities getCapabilities()</p>
+<p>Returns the capabilities of this evaluator.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>The capabilities of this evaluator</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-buildevaluator-weka-core-instances-data admonition">
+<p class="first admonition-title">public void buildEvaluator(weka.core.Instances data)</p>
+<p>Initializes an sparse projection attribute evaluator.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>data: data set of instances serving as training data</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-updateevaluator-instance-inst admonition">
+<p class="first admonition-title">public void updateEvaluator(Instance inst)</p>
+<p>Updates an attribute evaluator using the sparse projection approach.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>dnst: data set of instances serving as training data</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-void-applyselection admonition">
+<p class="first admonition-title">public void applySelection()</p>
+<p>Used to verify if a selection is needed.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-protected-void-resetoptions admonition">
+<p class="first admonition-title">protected void resetOptions()</p>
+<p>Reset options to their default values</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>None</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-protected-void-resetoptions admonition">
+<p class="first admonition-title">protected void resetOptions()</p>
+<p>Evaluates an individual attribute by measuring its relevance through the sparse projection approach.</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd><ul class="first last simple">
+<li>attribute: The index of the attribute to be evaluated</li>
+</ul>
+</dd>
+<dt>Returns</dt>
+<dd>Attribute rank based on the sparse projection approach</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-tostring admonition">
+<p class="first admonition-title">public String toString()</p>
+<p>Describe the attribute evaluator</p>
+<blockquote class="last">
+<div><dl class="docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>A description of the attribute evaluator as a string</dd>
+</dl>
+</div></blockquote>
+</div>
+<div class="admonition-public-string-getrevision admonition">
+<p class="first admonition-title">public String getRevision()</p>
+<p>Returns the revision string.</p>
+<dl class="last docutils">
+<dt>Parameters</dt>
+<dd>None</dd>
+<dt>Returns</dt>
+<dd>The revision</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="examplesGUI.html" class="btn btn-neutral float-left" title="Examples (GUI)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matheus Bernardelli de Moraes
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

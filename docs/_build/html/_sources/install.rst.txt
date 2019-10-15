@@ -3,7 +3,7 @@ Getting started
 
 Installation
 ------------
-In order to get started with MOAFS, you need to download it on your computer. 
+In order to get started with ``MOAFS``, you need to download it on your computer. 
 There are two main ways to to this:
 
 *   You can click on this [link](https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar)
@@ -14,14 +14,14 @@ There are two main ways to to this:
   git clone https://github.com/mbdemoraes/moafs
   cd lib
  
-After the download, just add the `moafs.jar` file in the "lib" folder on the directory where MOA is installed. It can be done manually or via terminal. 
-Here is an example doing this from terminal using `cp` command in Linux:
+After the download, just add the ``moafs.jar`` file in the ``lib`` folder on the directory where MOA is installed. It can be done manually or via terminal. 
+Here is an example doing this from terminal using ``cp`` command in Linux:
 
 .. code-block:: bash
 
-  cp moafs.jar /home/mbdemoraes/Documents/MOA/lib
+  cp moafs.jar /home/athos/Documentos/datasets/usenet1.arff
 
-Where `/home/mbdemoraes/Documents/MOA/lib` is the directory where MOA is installed.
+Where ``/home/athos/Documentos/datasets/usenet1.arff`` is the directory where MOA is installed.
 
 Dependencies
 ------------

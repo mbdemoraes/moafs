@@ -173,14 +173,14 @@
             
   <div class="section" id="examples-command-line">
 <h1>Examples (command line)<a class="headerlink" href="#examples-command-line" title="Permalink to this headline">¶</a></h1>
-<p>To run MOA with <cite>MOAFS</cite> from command line, you can use the following commands. <cite>/home/athos/Documentos/datasets/usenet1.arff</cite> is the directory in your computer where the data set is located.</p>
+<p>To run MOA with <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code> from command line, you can use the following commands. <code class="docutils literal notranslate"><span class="pre">/home/athos/Documentos/datasets/usenet1.arff</span></code> is the directory in your computer where the data set is located.</p>
 <div class="section" id="parameters">
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
-<p><cite>MOAFS</cite> uses a set of different parameters. They are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">MOAFS</span></code> uses a set of different parameters. They are:</p>
 <ul class="simple">
-<li>-f: Reduction rate - The number of features to select (default = 10)</li>
-<li>-w: Processing window - The number of instances to process using the specified reduction rate (default = 1)</li>
-<li>-m: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection</li>
+<li><code class="docutils literal notranslate"><span class="pre">-f</span></code>: Reduction rate - The number of features to select (default = 10)</li>
+<li><code class="docutils literal notranslate"><span class="pre">-w</span></code>: Processing window - The number of instances to process using the specified reduction rate (default = 1)</li>
+<li><code class="docutils literal notranslate"><span class="pre">-m</span></code>: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection</li>
 </ul>
 </div>
 <div class="section" id="classification-without-feature-selection-no-method">
@@ -233,22 +233,22 @@
 </div>
 <div class="section" id="changes-in-reduction-rate">
 <h2>Changes in Reduction rate<a class="headerlink" href="#changes-in-reduction-rate" title="Permalink to this headline">¶</a></h2>
-<p>Simply change the value for the <cite>-f</cite> parameter in your command line. If you do not want to perform any reduction, just omit it. For instance:</p>
+<p>Simply change the value for the <code class="docutils literal notranslate"><span class="pre">-f</span></code> parameter in your command line. If you do not want to perform any reduction, just omit it. For instance:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
 </div>
-<p>If you want a particular number, e.g. 4000 attributes, add it after the <cite>-f</cite> parameter:</p>
+<p>If you want a particular number, e.g. 4000 attributes, add it after the <code class="docutils literal notranslate"><span class="pre">-f</span></code> parameter:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="changes-in-processing-window">
 <h2>Changes in Processing window<a class="headerlink" href="#changes-in-processing-window" title="Permalink to this headline">¶</a></h2>
-<p>Simply change the value for the <cite>-w</cite> parameter in your command line. If you do not want to specify a processing window, just omit it and the default (1) will be used. For instance:</p>
+<p>Simply change the value for the <code class="docutils literal notranslate"><span class="pre">-w</span></code> parameter in your command line. If you do not want to specify a processing window, just omit it and the default (1) will be used. For instance:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
 </div>
-<p>If you want a particular number, e.g. 1000 instances, add it after the <cite>-w</cite> parameter:</p>
+<p>If you want a particular number, e.g. 1000 instances, add it after the <code class="docutils literal notranslate"><span class="pre">-w</span></code> parameter:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask <span class="s2">&quot;EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6 -w 1000) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100&quot;</span>
 </pre></div>
 </div>

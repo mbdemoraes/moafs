@@ -25,10 +25,9 @@ import com.yahoo.labs.samoa.instances.Instance;
 /**
  * <!-- globalinfo-start --> InfoGainAttributeEval :<br/>
  * <br/>
- * Evaluates the worth of an attribute by measuring the information gain with
- * respect to the class.<br/>
- * <br/>
- * InfoGain(Class,Attribute) = H(Class) - H(Class | Attribute).<br/>
+ * * Evaluates the worth of an attribute by measuring the information gain, 
+ * * chi-squared, symmetrical uncertainty, crammer's v-test or gain ratio with respect to the class.<br/>
+ * <br/><br/>
  * <p/>
  * <!-- globalinfo-end -->cd ..
  * 

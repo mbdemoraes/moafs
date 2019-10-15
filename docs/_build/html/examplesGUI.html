@@ -44,6 +44,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="apiguide.html" />
     <link rel="prev" title="Examples (command line)" href="quickstart.html" /> 
 </head>
 
@@ -93,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Examples (command line)</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Examples (GUI)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apiguide.html">API Documentation</a></li>
 </ul>
 
             
@@ -159,7 +161,32 @@
             
   <div class="section" id="examples-gui">
 <h1>Examples (GUI)<a class="headerlink" href="#examples-gui" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="_images/moafs_01.png"><img alt="fig1" src="_images/moafs_01.png" style="width: 100%;" /></a></p>
+<p>If you want to use <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code> in MOA’s graphical user interface (GUI), you can use the following command from a terminal (Linux/MAC) from the <code class="docutils literal notranslate"><span class="pre">lib</span></code> folder
+where your MOA is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+</pre></div>
+</div>
+<p>Or if you are using Windows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp .<span class="p">;</span>moafs.jar<span class="p">;</span>moa.jar<span class="p">;</span>lib/weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+</pre></div>
+</div>
+<p>If everything is OK, MOA’s GUI should appear as illustrated in the figure below.</p>
+<a class="reference internal image-reference" href="_images/moafs_01.png"><img alt="_images/moafs_01.png" src="_images/moafs_01.png" style="width: 100%;" /></a>
+<p>Then, click on <code class="docutils literal notranslate"><span class="pre">Configure</span></code> button on the left side. The <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Task</span></code> window should appear. Select <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">moa.tasks.EvaluateInterleavedTestThenTrain</span></code> in the
+first dropdown list.</p>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<p>Still on the <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Task</span></code> window, on <code class="docutils literal notranslate"><span class="pre">learner</span></code> options, click on the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> button. The <code class="docutils literal notranslate"><span class="pre">Editing</span> <span class="pre">option:</span> <span class="pre">learner</span></code> window should be presented. Select
+<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">moa.featureselection.classifiers.NaiveBayes</span></code> on the first dropdown list. Three options must be presented as ilustrated in the figure below.
+With these three options, you can select the number of features to be selected, the feature selection method to be used and the processing window size.</p>
+<a class="reference internal image-reference" href="_images/moafs_03.png"><img alt="_images/moafs_03.png" src="_images/moafs_03.png" style="width: 50%;" /></a>
+<p>To select a data set from a local directory, on the <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Task</span></code> window, on <code class="docutils literal notranslate"><span class="pre">stream</span></code> options, click on the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> button.</p>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<p>Then, <code class="docutils literal notranslate"><span class="pre">Editing</span> <span class="pre">option:</span> <span class="pre">stream</span></code> window should be presented. Select
+<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">moa.streams.ArffFileStream</span></code> on the first dropdown list. Then you can select the data set from the <code class="docutils literal notranslate"><span class="pre">arffFile</span></code> option.</p>
+<a class="reference internal image-reference" href="_images/moafs_04.png"><img alt="_images/moafs_04.png" src="_images/moafs_04.png" style="width: 50%;" /></a>
+<p>If everything is according to plan, just press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button on all windows and you will be returned to the main page. There, just click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button on the right side and MOA
+will perform the classification of the data set using the selected feature selection method.</p>
+<a class="reference internal image-reference" href="_static/moafs_06.png"><img alt="_static/moafs_06.png" src="_static/moafs_06.png" style="width: 100%;" /></a>
 <p>For further documentation on MOA, please refer to <a class="reference external" href="https://moa.cms.waikato.ac.nz/documentation/">https://moa.cms.waikato.ac.nz/documentation/</a>.</p>
 </div>
 
@@ -170,6 +197,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apiguide.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="quickstart.html" class="btn btn-neutral float-left" title="Examples (command line)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
