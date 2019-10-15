@@ -43,7 +43,7 @@ From the lib folder where your MOA is installed:
 
 > java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
-You can also use the jar's full location:
+Or using jar's full location:
 
 > java -cp .;moa-release-2018.6.0/lib/moafs.jar;moa-release-2018.6.0/lib/moa.jar -javaagent:moa-release-2018.6.0/lib/sizeofag-1.0.4.jar moa.gui.GUI
 
@@ -53,7 +53,7 @@ From the lib folder where your MOA is installed:
 
 > java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
-Using full location:
+Or using full location:
 
 > java -cp moa-release-2018.6.0/lib/moa.jar:./moa.jar-javaagent:moa-release-2018.6.0/lib/sizeofag-1.0.4.jar moa.gui.GUI
 
