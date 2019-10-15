@@ -63,7 +63,7 @@ Example (Linux/mac):
 Here is an example using the Interleaved-Test-Then-Train approach with the Chi-Squared algorithm on the [Usenet1](http://mlkd.csd.auth.gr/datasets.html) data set, selecting 20 features:
 
 ```
-java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 20 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 ```
 
 This should generate a similar results screen:
@@ -72,12 +72,6 @@ This should generate a similar results screen:
 <p align="left">
 <img src="./docs/_static/telaMOAFS.png" alt="MOAFSscreen">
 </p>
-
-Another example on the same data set using Information Gain, selecting 40 features:
-
-```
-java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
-```
 
 # License
 
