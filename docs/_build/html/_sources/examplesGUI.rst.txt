@@ -6,13 +6,13 @@ where your MOA is installed:
 
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
 Or if you are using Windows:
 
 .. code-block:: bash
 
-    java -cp .;moafs.jar;moa.jar;lib/weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+    java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
 If everything is OK, MOA's GUI should appear as illustrated in the figure below.
 

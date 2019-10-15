@@ -28,3 +28,20 @@ Dependencies
 
 * Java 8
 * MOA v2018.06
+
+Running GUI
+------------
+
+To run MOA's GUI with MOAFS as an extension, use the following comands from a command line:
+
+Example (Windows):
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+
+Example (Linux/mac):
+
+.. code-block:: bash
+
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI

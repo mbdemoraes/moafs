@@ -39,11 +39,11 @@ Simply download the [moafs.jar](https://github.com/mbdemoraes/moafs/raw/master/l
 
 Example (Windows):
 
-> java -cp .;moafs.jar;moa.jar;lib/weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+> java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
 Example (Linux/mac):
 
-> java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+> java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
 ### Requirements
 

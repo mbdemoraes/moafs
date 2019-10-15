@@ -15,63 +15,136 @@ Parameters
 Classification without feature selection (No method)
 ----------------------------------------------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
 
 
 Information Gain
 -----------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 1) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
 
 
 Symmetrical Uncertainty
 ------------------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 2) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 2) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 2) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
+
 
 Chi-Squared
 ------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 3) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+
+WINDOWS
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 3) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
 
 Cramers V-Test
 ---------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 4) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 4) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 4) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
 
 
 Gain Ratio
 ----------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 5) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 5) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS 
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 5) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
 
 
 Extremal Feature Selection
 --------------------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS 
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
+
 
 
 Online Feature Selection
 -------------------------
 
+LINUX/MAC
+
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 7) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+
+WINDOWS 
+
+.. code-block:: bash
+
+  java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 40 -m 7) -s (ArffFileStream -f C:\Users\athos\Download\usenet1.arff) -f 100"
+
 
 
 Changes in Reduction rate
@@ -81,13 +154,13 @@ Simply change the value for the ``-f`` parameter in your command line. If you do
 
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 
 If you want a particular number, e.g. 4000 attributes, add it after the ``-f`` parameter:
 
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 
 
 Changes in Processing window
@@ -97,13 +170,13 @@ Simply change the value for the ``-w`` parameter in your command line. If you do
 
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 
 If you want a particular number, e.g. 1000 instances, add it after the ``-w`` parameter:  
 
 .. code-block:: bash
 
-  java -cp moafs.jar:moa.jar:weka.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6 -w 1000) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
+  java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.DoTask "EvaluateInterleavedTestThenTrain -l (moa.featureselection.classifiers.NaiveBayes -f 4000 -m 6 -w 1000) -s (ArffFileStream -f /home/athos/Documentos/datasets/usenet1.arff) -f 100"
 
 
 For further documentation on MOA, please refer to https://moa.cms.waikato.ac.nz/documentation/.
