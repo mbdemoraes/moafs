@@ -70,7 +70,7 @@ This should generate a similar results screen:
 
 
 <p align="left">
-<img src="./docs/_static/telaMOAFS.png" alt="MOAFSscreen" width="500" height="500">
+<img src="./docs/_static/telaMOAFS.png" alt="MOAFSscreen">
 </p>
 
 Another example on the same data set using Information Gain, selecting 40 features:
