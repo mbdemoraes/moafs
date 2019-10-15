@@ -295,9 +295,21 @@ Evaluates the worth of an attribute by measuring the information gain, chi-squar
 Attribute Evaluator
 ----------------------
 
-.. admonition:: class moa.featureselection.common.MOAAttributeEvaluator()
+Interface class to guarantee all classes contains the necessary methods.
 
-   Teste
+.. admonition::  public void updateEvaluator(Instance inst)
+
+    Updates an attribute evaluator using the specified approach.
+
+.. admonition:: public void applySelection()
+
+    Used to verify if a selection is needed.
+   
+
+.. admonition:: public boolean isUpdated()
+
+   Verifies if the attribute evaluator is upated with the new instance.
+
 
 Extremal Feature Selection
 ----------------------------

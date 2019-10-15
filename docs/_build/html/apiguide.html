@@ -536,9 +536,18 @@ to test the model before it is used for training.</p>
 </div>
 <div class="section" id="attribute-evaluator">
 <h2>Attribute Evaluator<a class="headerlink" href="#attribute-evaluator" title="Permalink to this headline">¶</a></h2>
-<div class="admonition-class-moa-featureselection-common-moaattributeevaluator admonition">
-<p class="first admonition-title">class moa.featureselection.common.MOAAttributeEvaluator()</p>
-<p class="last">Teste</p>
+<p>Interface class to guarantee all classes contains the necessary methods.</p>
+<div class="admonition-public-void-updateevaluator-instance-inst admonition">
+<p class="first admonition-title">public void updateEvaluator(Instance inst)</p>
+<p class="last">Updates an attribute evaluator using the specified approach.</p>
+</div>
+<div class="admonition-public-void-applyselection admonition">
+<p class="first admonition-title">public void applySelection()</p>
+<p class="last">Used to verify if a selection is needed.</p>
+</div>
+<div class="admonition-public-boolean-isupdated admonition">
+<p class="first admonition-title">public boolean isUpdated()</p>
+<p class="last">Verifies if the attribute evaluator is upated with the new instance.</p>
 </div>
 </div>
 <div class="section" id="extremal-feature-selection">
