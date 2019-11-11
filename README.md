@@ -1,3 +1,4 @@
+
 # Abstract
 
 `MOAFS` is a library for the [Massive Online Analysis](https://moa.cms.waikato.ac.nz/) framework. It is based on the [MOAReduction](https://linkinghub.elsevier.com/retrieve/pii/S0925231217302631) extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field. `MOAFS` uses an incremental version of Naïve Bayes as the base classifier.
@@ -91,5 +92,9 @@ Distributed under the GNU General Public License v3.0 License. See `LICENSE` for
 
 # Contact
 
-If you wish to contribute to the software, report issues or problems or seek suport, feel free to use the issue report of this repository or to contact me.
-Matheus Bernardelli de Moraes - matheuzmoraes@gmail.com
+If you wish to contribute to the software, report issues or problems or seek suport, feel free to use the issue report of this repository or to contact us.
+
+Matheus Bernardelli de Moraes -- matheuzmoraes@gmail.com
+
+André Leon S. Gradvohl -- gradvohl@ft.unicamp.br
+
