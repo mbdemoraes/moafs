@@ -1,3 +1,4 @@
+
 # Abstract
 
 `MOAFS` is a library for the [Massive Online Analysis](https://moa.cms.waikato.ac.nz/) framework. It is based on the [MOAReduction](https://linkinghub.elsevier.com/retrieve/pii/S0925231217302631) extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field. `MOAFS` uses an incremental version of Naïve Bayes as the base classifier.
@@ -70,6 +71,14 @@ Or using full location:
 * -w: Processing window -  The number of instances to process using the specified reduction rate (default = 1)
 * -m: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection
 
+# Sample datasets
+
+This repository contains some sample datasets that may be used in the experiments. They were obtained from different sources:
+
+* usenet1, usenet2, usenet3, spam-data and emailing_list were collected by The Machine Learning and Knowledge Discovery (MLKD) group at [Concept Drifting Datasets in Weka](http://mlkd.csd.auth.gr/datasets.html)
+* spambase, gas_sensor, semeion, enron and synthetic_control were obtained at [UCI](https://archive.ics.uci.edu/ml/index.php)
+* usenet_recurrent was collected by Dr. Gama at [Datasets for Concept Drift](http://www.liaad.up.pt/kdus/products/datasets-for-concept-drift)
+
 # Examples from the command line (Linux)
 
 Here is an example using the Interleaved-Test-Then-Train approach with the Chi-Squared algorithm on the [Usenet1](http://mlkd.csd.auth.gr/datasets.html) data set, selecting 20 features:
@@ -91,5 +100,9 @@ Distributed under the GNU General Public License v3.0 License. See `LICENSE` for
 
 # Contact
 
-If you wish to contribute to the software, report issues or problems or seek suport, feel free to use the issue report of this repository or to contact me.
-Matheus Bernardelli de Moraes - matheuzmoraes@gmail.com
+If you wish to contribute to the software, report issues or problems or seek suport, feel free to use the issue report of this repository or to contact us.
+
+Matheus Bernardelli de Moraes -- matheuzmoraes@gmail.com
+
+André Leon S. Gradvohl -- gradvohl@ft.unicamp.br
+

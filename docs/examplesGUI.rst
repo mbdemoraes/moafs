@@ -46,8 +46,71 @@ Then, ``Editing option: stream`` window should be presented. Select
 If everything is according to plan, just press the ``OK`` button on all windows and you will be returned to the main page. There, just click on the ``Run`` button on the right side and MOA
 will perform the classification of the data set using the selected feature selection method.
 
-.. image:: _static/moafs_06.png
+.. image:: _static/moafs_05.png
   :width: 100 %
 
 
-For further documentation on MOA, please refer to https://moa.cms.waikato.ac.nz/documentation/.
+Classification without feature selection (No method)
+----------------------------------------------------
+
+.. image:: _static/moafs_01.png
+  :width: 100 %
+
+.. image:: _static/moafs_02.png
+  :width: 50 %
+
+.. image:: _static/moafs_03.png
+  :width: 50 %
+
+Select a desired number of features on ``numFeatures`` and the window size on ``winSize`` options. For the ``fsMethod``, leave it as zero. Therefore, no feature
+selection method will be used for the classification process. 
+
+To select a data set from a local directory, on the ``Configure Task`` window, on ``stream`` options, click on the ``Edit`` button. 
+
+.. image:: _static/moafs_02.png
+  :width: 50 %
+
+Then, ``Editing option: stream`` window should be presented. Select
+``class moa.streams.ArffFileStream`` on the first dropdown list. Then you can select the data set from the ``arffFile`` option.
+
+.. image:: _static/moafs_04.png
+  :width: 50 %
+
+If everything is according to plan, just press the ``OK`` button on all windows and you will be returned to the main page. There, just click on the ``Run`` button on the right side and MOA
+will perform the classification of the data set using the selected feature selection method.
+
+.. image:: _static/moafs_05.png
+  :width: 100 %
+
+
+Information Gain
+-----------------
+
+.. image:: _static/moafs_01.png
+  :width: 100 %
+
+.. image:: _static/moafs_02.png
+  :width: 50 %
+
+.. image:: _static/moafs_07.png
+  :width: 50 %
+
+Select a desired number of features on ``numFeatures`` and the window size on ``winSize`` options. For the ``fsMethod``, set it to 1. 
+
+Select a data set from a local directory, on the ``Configure Task`` window, on ``stream`` options, click on the ``Edit`` button. 
+
+.. image:: _static/moafs_02.png
+  :width: 50 %
+
+Then, ``Editing option: stream`` window should be presented. Select
+``class moa.streams.ArffFileStream`` on the first dropdown list. Then you can select the data set from the ``arffFile`` option.
+
+.. image:: _static/moafs_04.png
+  :width: 50 %
+
+If everything is according to plan, just press the ``OK`` button on all windows and you will be returned to the main page. There, just click on the ``Run`` button on the right side and MOA
+will perform the classification of the data set using the selected feature selection method.
+
+.. image:: _static/moafs_06.png
+  :width: 100 %
+

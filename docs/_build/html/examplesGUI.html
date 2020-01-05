@@ -93,7 +93,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Examples (command line)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples (GUI)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples (GUI)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#classification-without-feature-selection-no-method">Classification without feature selection (No method)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#information-gain">Information Gain</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="apiguide.html">API Documentation</a></li>
 </ul>
 
@@ -186,8 +190,38 @@ With these three options, you can select the number of features to be selected, 
 <a class="reference internal image-reference" href="_images/moafs_04.png"><img alt="_images/moafs_04.png" src="_images/moafs_04.png" style="width: 50%;" /></a>
 <p>If everything is according to plan, just press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button on all windows and you will be returned to the main page. There, just click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button on the right side and MOA
 will perform the classification of the data set using the selected feature selection method.</p>
+<a class="reference internal image-reference" href="_images/moafs_05.png"><img alt="_images/moafs_05.png" src="_images/moafs_05.png" style="width: 100%;" /></a>
+<div class="section" id="classification-without-feature-selection-no-method">
+<h2>Classification without feature selection (No method)<a class="headerlink" href="#classification-without-feature-selection-no-method" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/moafs_01.png"><img alt="_images/moafs_01.png" src="_images/moafs_01.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_images/moafs_03.png"><img alt="_images/moafs_03.png" src="_images/moafs_03.png" style="width: 50%;" /></a>
+<p>Select a desired number of features on <code class="docutils literal notranslate"><span class="pre">numFeatures</span></code> and the window size on <code class="docutils literal notranslate"><span class="pre">winSize</span></code> options. For the <code class="docutils literal notranslate"><span class="pre">fsMethod</span></code>, leave it as zero. Therefore, no feature
+selection method will be used for the classification process.</p>
+<p>To select a data set from a local directory, on the <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Task</span></code> window, on <code class="docutils literal notranslate"><span class="pre">stream</span></code> options, click on the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> button.</p>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<p>Then, <code class="docutils literal notranslate"><span class="pre">Editing</span> <span class="pre">option:</span> <span class="pre">stream</span></code> window should be presented. Select
+<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">moa.streams.ArffFileStream</span></code> on the first dropdown list. Then you can select the data set from the <code class="docutils literal notranslate"><span class="pre">arffFile</span></code> option.</p>
+<a class="reference internal image-reference" href="_images/moafs_04.png"><img alt="_images/moafs_04.png" src="_images/moafs_04.png" style="width: 50%;" /></a>
+<p>If everything is according to plan, just press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button on all windows and you will be returned to the main page. There, just click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button on the right side and MOA
+will perform the classification of the data set using the selected feature selection method.</p>
+<a class="reference internal image-reference" href="_images/moafs_05.png"><img alt="_images/moafs_05.png" src="_images/moafs_05.png" style="width: 100%;" /></a>
+</div>
+<div class="section" id="information-gain">
+<h2>Information Gain<a class="headerlink" href="#information-gain" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/moafs_01.png"><img alt="_images/moafs_01.png" src="_images/moafs_01.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_static/moafs_07.png"><img alt="_static/moafs_07.png" src="_static/moafs_07.png" style="width: 50%;" /></a>
+<p>Select a desired number of features on <code class="docutils literal notranslate"><span class="pre">numFeatures</span></code> and the window size on <code class="docutils literal notranslate"><span class="pre">winSize</span></code> options. For the <code class="docutils literal notranslate"><span class="pre">fsMethod</span></code>, set it to 1.</p>
+<p>Select a data set from a local directory, on the <code class="docutils literal notranslate"><span class="pre">Configure</span> <span class="pre">Task</span></code> window, on <code class="docutils literal notranslate"><span class="pre">stream</span></code> options, click on the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> button.</p>
+<a class="reference internal image-reference" href="_images/moafs_02.png"><img alt="_images/moafs_02.png" src="_images/moafs_02.png" style="width: 50%;" /></a>
+<p>Then, <code class="docutils literal notranslate"><span class="pre">Editing</span> <span class="pre">option:</span> <span class="pre">stream</span></code> window should be presented. Select
+<code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">moa.streams.ArffFileStream</span></code> on the first dropdown list. Then you can select the data set from the <code class="docutils literal notranslate"><span class="pre">arffFile</span></code> option.</p>
+<a class="reference internal image-reference" href="_images/moafs_04.png"><img alt="_images/moafs_04.png" src="_images/moafs_04.png" style="width: 50%;" /></a>
+<p>If everything is according to plan, just press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button on all windows and you will be returned to the main page. There, just click on the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button on the right side and MOA
+will perform the classification of the data set using the selected feature selection method.</p>
 <a class="reference internal image-reference" href="_static/moafs_06.png"><img alt="_static/moafs_06.png" src="_static/moafs_06.png" style="width: 100%;" /></a>
-<p>For further documentation on MOA, please refer to <a class="reference external" href="https://moa.cms.waikato.ac.nz/documentation/">https://moa.cms.waikato.ac.nz/documentation/</a>.</p>
+</div>
 </div>
 
 
