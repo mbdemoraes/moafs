@@ -73,7 +73,7 @@ Or using full location:
 
 # Sample datasets
 
-This repository contains some sample datasets which may be used for experiments. They were obtained from different sources:
+This repository contains some sample datasets at the ``sample datasets` folder, which may be used for experiments. They were obtained from different sources:
 
 * usenet1, usenet2, usenet3, spam-data and emailing_list were collected by The Machine Learning and Knowledge Discovery (MLKD) group and can be found at [Concept Drifting Datasets in Weka](http://mlkd.csd.auth.gr/datasets.html);
 * spambase, gas_sensor, semeion, enron and synthetic_control were obtained at [UCI](https://archive.ics.uci.edu/ml/index.php)
