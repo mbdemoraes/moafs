@@ -6,8 +6,10 @@ Installation
 In order to get started with ``MOAFS``, you need to download it on your computer. 
 There are two main ways to to this:
 
-*   You can click on this [link](https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar)
+*   You can click on this link `MOAFS`_;
 *   Or you can clone the github repository and get the file from your local copy:
+
+.. _MOAFS: https://github.com/mbdemoraes/moafs/raw/master/lib/moafs.jar
 
 .. code-block:: bash
 
@@ -26,8 +28,15 @@ Where ``/home/athos/Documentos/datasets/usenet1.arff`` is the directory where MO
 Dependencies
 ------------
 
-* Java 8
-* MOA v2018.06
+* Java 8;
+* MOA v2018.06 (found at `MOA`_).
+
+.. _MOA: https://moa.cms.waikato.ac.nz/downloads/
+
+Sample datasets
+----------------
+
+Sample datasets can be found on the repository at Github.
 
 Running GUI
 ------------

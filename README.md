@@ -73,11 +73,15 @@ Or using full location:
 
 # Sample datasets
 
-This repository contains some sample datasets that may be used in the experiments. They were obtained from different sources:
+This repository contains some sample datasets which may be used for experiments. They were obtained from different sources:
 
-* usenet1, usenet2, usenet3, spam-data and emailing_list were collected by The Machine Learning and Knowledge Discovery (MLKD) group at [Concept Drifting Datasets in Weka](http://mlkd.csd.auth.gr/datasets.html)
+* usenet1, usenet2, usenet3, spam-data and emailing_list were collected by The Machine Learning and Knowledge Discovery (MLKD) group and can be found at [Concept Drifting Datasets in Weka](http://mlkd.csd.auth.gr/datasets.html);
 * spambase, gas_sensor, semeion, enron and synthetic_control were obtained at [UCI](https://archive.ics.uci.edu/ml/index.php)
-* usenet_recurrent was collected by Dr. Gama at [Datasets for Concept Drift](http://www.liaad.up.pt/kdus/products/datasets-for-concept-drift)
+* usenet_recurrent was collected by Dr. Gama and can be found at [Datasets for Concept Drift](http://www.liaad.up.pt/kdus/products/datasets-for-concept-drift)
+
+# Sample outputs
+
+This repository contains sample outputs using the presented feature selection algorithms using the usenet1 dataset at the `sample outputs` folder.
 
 # Examples from the command line (Linux)
 
