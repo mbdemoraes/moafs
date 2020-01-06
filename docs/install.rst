@@ -36,7 +36,12 @@ Dependencies
 Sample datasets
 ----------------
 
-Sample datasets can be found on the repository at Github.
+Sample datasets can be found on the repository of this project at Github.
+
+Sample outputs
+----------------
+
+Sample outputs can be found on the repository of this project at Github.
 
 Running GUI
 ------------
