@@ -63,6 +63,12 @@ Or using full location:
 * Java 8;
 * [MOA v2018.06](https://moa.cms.waikato.ac.nz/downloads/).
 
+# How to test this library
+
+1. Download the datasets in arff format which you want to experiment. There are sample datasets available in this repository;
+2. Run MOA with MOAFS, from command line or using GUI;
+3. Follow the examples demonstrated in the <a href="https://moafs.readthedocs.io/en/latest/"><strong>Docs</strong></a>.
+
 # Parameters
 
 `MOAFS` uses a set of different parameters:
@@ -89,7 +95,7 @@ This repository contains some sample datasets at the `sample datasets` folder, w
 
 # Sample outputs
 
-This repository contains sample outputs using the presented feature selection algorithms using the usenet1 dataset at the `sample outputs` folder.
+This repository contains sample outputs using the presented feature selection algorithms using the usenet1 dataset at the `sample outputs` folder, considering `window size`= 10 and `number of features`= 20.
 
 # Examples from the command line (Linux)
 
