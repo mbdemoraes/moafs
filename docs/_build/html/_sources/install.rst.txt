@@ -4,7 +4,7 @@ Getting started
 Installation
 ------------
 In order to get started with ``MOAFS``, you need to download it on your computer. 
-There are two main ways to to this:
+There are two main approaches to do this:
 
 *   You can click on this link `MOAFS`_;
 *   Or you can clone the github repository and get the file from your local copy:
@@ -16,8 +16,8 @@ There are two main ways to to this:
   git clone https://github.com/mbdemoraes/moafs
   cd lib
  
-After the download, just add the ``moafs.jar`` file in the ``lib`` folder on the directory where MOA is installed. It can be done manually or via terminal. 
-Here is an example doing this from terminal using ``cp`` command in Linux:
+After the download, just add the ``moafs.jar`` file in the ``lib`` folder on the directory where MOA is installed. It can be done manually or by terminal. 
+Here is an example from terminal using ``cp`` command in Linux:
 
 .. code-block:: bash
 
@@ -46,7 +46,7 @@ Sample outputs can be found on the repository of this project at Github.
 Running GUI
 ------------
 
-To run MOA's GUI with MOAFS as an extension, use the following comands from a command line:
+To run MOA's GUI with ``MOAFS`` as an extension, use the following comands from a command line:
 
 Example (Windows):
 

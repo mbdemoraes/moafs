@@ -33,8 +33,8 @@ first dropdown list.
 
 Still on the ``Configure Task`` window, on ``learner`` options, click on the ``Edit`` button. The ``Editing option: learner`` window should be presented. Select
 ``class moa.featureselection.classifiers.NaiveBayes`` on the first dropdown list. Three options must be presented as ilustrated in the figure below. 
-With these three options, you can select the number of features to be selected, the feature selection method and the processing window size. To perform
-classification without feature selection, set ``fsMethods`' to 0.
+With these options, you can select the number of relevant features to be selected, the feature selection method and the processing window size. To perform
+classification without feature selection, set ``fsMethods`` to 0.
 
 .. image:: _static/moafs_03.png
   :width: 50 %
