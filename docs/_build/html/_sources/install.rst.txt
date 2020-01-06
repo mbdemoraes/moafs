@@ -59,3 +59,10 @@ Example (Linux/mac):
 .. code-block:: bash
 
   java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+
+How to test this library
+-------------------------
+
+1. Download the datasets in arff format which you want to experiment. There are sample datasets available in this repository;
+2. Run MOA with MOAFS, from command line or using GUI;
+3. Follow the examples demonstrated in the Examples sections.
