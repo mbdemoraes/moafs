@@ -70,7 +70,14 @@ Or using full location:
 * -f: Reduction rate - The number of features to select (default = 10)
 * -w: Processing window -  The number of instances to process using the specified reduction rate (default = 1)
 * -m: Feature Selection Method - Feature selection method to be used. Options: 
-    * 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection
+    * 0 = No method;
+    * 1 = Information Gain;
+    * 2 = Symmetrical Uncertainty;
+    * 3 = Chi-Squared;
+    * 4 = Cramers V-Test;
+    * 5 = Gain Ratio;
+    * 6 = Extremal Feature Selection;
+    * 7 = Online Feature Selection.
 
 # Sample datasets
 
