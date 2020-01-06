@@ -24,7 +24,7 @@ bibliography: paper.bib
 
 Data streams are continuous, potentially unbounded and high-dimensional data, transmitted at high-volume and high-velocity, which turns impracticable its storage in traditional database mechanisms [@Ramirez-Gallego:2017]. In such cases, data streams have to be processed and analyzed online. However, as it is potentially unbounded, it is expected a change in data probabilistic distribution over time, the Concept Drift phenomenon. This phenomenon turns the online data process and analysis completely dynamic. Using classification algorithms is one approach to learn from data streams, as it will categorize the data into different classes for future decisions. However, data streams high dimensionality imposes a challenge on the classification process, since it increases both computational cost and time, as well as aggravate the concept drift impacts. To solve this problem, online feature selection algorithms have been proposed to reduce data dimensionality by removing irrelevant and redundant attributes from the data streams.  As shown in the figure below, feature selection methods affect the classification process in multiple forms. Using the right method is an important step in the learning process, especially when handling the concept drift phenomenon.
 
-![Accuracy over time.](acc_usenet1.png)
+![Accuracy over time.](acc_usenet1.eps)
 
 # Statement of need
 
