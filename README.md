@@ -69,11 +69,12 @@ Or using full location:
 
 * -f: Reduction rate - The number of features to select (default = 10)
 * -w: Processing window -  The number of instances to process using the specified reduction rate (default = 1)
-* -m: Feature Selection Method - Feature selection method to be used. Options: 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection
+* -m: Feature Selection Method - Feature selection method to be used. Options: 
+    * 0. No method. 1. Information Gain 2. Symmetrical Uncertainty 3. Chi-Squared 4. Cramers V-Test 5. Gain Ratio 6. Extremal Feature Selection 7. Online Feature Selection
 
 # Sample datasets
 
-This repository contains some sample datasets at the ``sample datasets` folder, which may be used for experiments. They were obtained from different sources:
+This repository contains some sample datasets at the `sample datasets` folder, which may be used for experiments. They were obtained from different sources:
 
 * usenet1, usenet2, usenet3, spam-data and emailing_list were collected by The Machine Learning and Knowledge Discovery (MLKD) group and can be found at [Concept Drifting Datasets in Weka](http://mlkd.csd.auth.gr/datasets.html);
 * spambase, gas_sensor, semeion, enron and synthetic_control were obtained at [UCI](https://archive.ics.uci.edu/ml/index.php)
