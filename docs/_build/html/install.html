@@ -96,7 +96,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sample-datasets">Sample datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sample-outputs">Sample outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#running-gui">Running GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-gui">Running GUI</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-windows">Example (Windows):</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-linux-mac">Example (Linux/mac):</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-test-this-library">How to test this library</a></li>
 </ul>
 </li>
@@ -206,13 +210,27 @@ Here is an example from terminal using <code class="docutils literal notranslate
 <div class="section" id="running-gui">
 <h2>Running GUI<a class="headerlink" href="#running-gui" title="Permalink to this headline">¶</a></h2>
 <p>To run MOA’s GUI with <code class="docutils literal notranslate"><span class="pre">MOAFS</span></code> as an extension, use the following comands from a command line:</p>
-<p>Example (Windows):</p>
+<div class="section" id="example-windows">
+<h3>Example (Windows):<a class="headerlink" href="#example-windows" title="Permalink to this headline">¶</a></h3>
+<p>From the lib folder where your MOA is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp .<span class="p">;</span>moafs.jar<span class="p">;</span>moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 </pre></div>
 </div>
-<p>Example (Linux/mac):</p>
+<p>Or using full location:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp .<span class="p">;</span>full_path_to_MOA_location/lib/moafs.jar<span class="p">;</span>moa.jar -javaagent:full_path_to_MOA_location/lib/sizeofag-1.0.4.jar moa.gui.GUI
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-linux-mac">
+<h3>Example (Linux/mac):<a class="headerlink" href="#example-linux-mac" title="Permalink to this headline">¶</a></h3>
+<p>From the lib folder where your MOA is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 </pre></div>
+</div>
+<p>Or using full location:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>java -cp full_path_to_MOA_location/lib/moafs.jar:moa.jar -javaagent:full_path_to_MOA_location/lib/sizeofag-1.0.4.jar moa.gui.GUI
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="how-to-test-this-library">

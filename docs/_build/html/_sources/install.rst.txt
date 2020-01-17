@@ -49,16 +49,34 @@ Running GUI
 To run MOA's GUI with ``MOAFS`` as an extension, use the following comands from a command line:
 
 Example (Windows):
+^^^^^^^^^^^^^^^^^^^
+
+From the lib folder where your MOA is installed:
 
 .. code-block:: bash
 
   java -cp .;moafs.jar;moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
 
+Or using full location:
+
+.. code-block:: bash
+
+  java -cp .;full_path_to_MOA_location/lib/moafs.jar;moa.jar -javaagent:full_path_to_MOA_location/lib/sizeofag-1.0.4.jar moa.gui.GUI
+
 Example (Linux/mac):
+^^^^^^^^^^^^^^^^^^^^^
+
+From the lib folder where your MOA is installed:
 
 .. code-block:: bash
 
   java -cp moafs.jar:moa.jar -javaagent:sizeofag-1.0.4.jar moa.gui.GUI
+
+Or using full location:
+
+.. code-block:: bash
+
+  java -cp full_path_to_MOA_location/lib/moafs.jar:moa.jar -javaagent:full_path_to_MOA_location/lib/sizeofag-1.0.4.jar moa.gui.GUI
 
 How to test this library
 -------------------------
