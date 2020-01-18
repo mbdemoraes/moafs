@@ -1,7 +1,7 @@
 
 [![docs](https://readthedocs.org/projects/moafs/badge/?version=latest)](https://moafs.readthedocs.io/en/latest/?badge=latest)
 [![license](https://img.shields.io/eclipse-marketplace/l/Vrapper))](
-https://github.com/mbdemoraes/moafs/blob/master/LICENSE.txt)
+https://github.com/mbdemoraes/moafs/blob/master/LICENSE
 
 
 # Abstract
