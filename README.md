@@ -1,6 +1,6 @@
 
 [![docs](https://readthedocs.org/projects/moafs/badge/?version=latest)](https://moafs.readthedocs.io/en/latest/?badge=latest)
-[![License](https://img.shields.io/github/license/VarIr/scikit-hubness.svg)](
+[![license](https://img.shields.io/eclipse-marketplace/l/moafs))](
 https://github.com/mbdemoraes/moafs/blob/master/LICENSE.txt)
 
 
