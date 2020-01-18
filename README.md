@@ -1,4 +1,9 @@
 
+[![docs](https://readthedocs.org/projects/moafs/badge/?version=latest)](https://moafs.readthedocs.io/en/latest/?badge=latest)
+[![License](https://img.shields.io/github/license/VarIr/scikit-hubness.svg)](
+https://github.com/mbdemoraes/moafs/blob/master/LICENSE.txt)
+
+
 # Abstract
 
 `MOAFS` is a library for the [Massive Online Analysis](https://moa.cms.waikato.ac.nz/) framework. It is based on the [MOAReduction](https://linkinghub.elsevier.com/retrieve/pii/S0925231217302631) extension and contains the implementation of seven feature selection algorithms to be used as dimensionality reduction techniques in data streams classification problems, especially in the text-domain field. `MOAFS` uses an incremental version of Naïve Bayes as the base classifier.
